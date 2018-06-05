@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 var route=require('./routes/route');
 app.use('/vondos/v1/api',route);
 module.exports=app;
-var port = config.server.port || process.env.PORT;
+var port = process.env.PORT || config.server.port;
 app.listen(port,function () {
     console.log("server is listening at "+ port);
 });
